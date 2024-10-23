@@ -23,10 +23,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # SEPolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(JAMESDSP_PATH)/sepolicy/vendor
 
-# Proprietary blobs
-PRODUCT_COPY_FILES += \
-    $(JAMESDSP_PATH)/proprietary/vendor/lib/soundfx/libjamesdsp.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libjamesdsp.so \
-    $(JAMESDSP_PATH)/proprietary/vendor/lib64/soundfx/libjamesdsp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libjamesdsp.so
-
 PRODUCT_PACKAGES += \
+    libjamesdsp \
     JamesDSPManager
