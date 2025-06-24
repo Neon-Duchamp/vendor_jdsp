@@ -16,34 +16,30 @@ soong_namespace {
 }
 
 android_app_import {
-	name: "JamesDSPManager",
-	owner: "JamesDSP",
-	apk: "proprietary/system/app/JamesDSPManager/JamesDSPManagerThePBone.apk",
+    name: "JamesDSPManager",
+    owner: "JamesDSP",
+    apk: "proprietary/system/app/JamesDSPManager/JamesDSPManagerThePBone.apk",
     overrides: ["AudioFX"],
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
 }
 
 cc_prebuilt_library_shared {
-	name: "libjamesdsp",
-	owner: "JamesDSP",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/soundfx/libjamesdsp.so"],
-			shared_libs: ["liblog", "libc", "libm", "libdl", ],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/soundfx/libjamesdsp.so"],
-			shared_libs: ["liblog", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "both",
-	relative_install_path: "soundfx",
-	prefer: true,
-	soc_specific: true,
+    name: "libjamesdsp",
+    owner: "JamesDSP",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/soundfx/libjamesdsp.so"],
+            shared_libs: ["liblog", "libc", "libm", "libdl"],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
 }
