@@ -17,7 +17,7 @@ soong_namespace {
 
 android_app_import {
     name: "JamesDSPManager",
-    owner: "JamesDSP",
+    owner: "xiaomi",
     apk: "proprietary/system/app/JamesDSPManager/JamesDSPManagerThePBone.apk",
     overrides: ["AudioFX"],
     certificate: "platform",
@@ -28,7 +28,7 @@ android_app_import {
 
 cc_prebuilt_library_shared {
     name: "libjamesdsp",
-    owner: "JamesDSP",
+    owner: "xiaomi",
     strip: {
         none: true,
     },
