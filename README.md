@@ -8,7 +8,7 @@ Audio DSP effects build on Android system framework layer. This is a repository 
 Clone the repository :-
 
 ```bash
-git clone https://github.com/GOS-Devices/vendor_JamesDSP.git vendor/JamesDSP
+git clone https://github.com/GOS-Devices/vendor_JamesDSP.git vendor/jdsp
 ```
 
 Patches required on the device tree side (Example) :-

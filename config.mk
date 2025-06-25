@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-JAMESDSP_PATH := vendor/JamesDSP
+JAMESDSP_PATH := vendor/jdsp
 
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
